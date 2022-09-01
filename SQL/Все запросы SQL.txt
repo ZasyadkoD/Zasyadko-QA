@@ -1,0 +1,30 @@
+1.
+SELECT * FROM Customers
+WHERE Country = 'Germany';
+2.
+SELECT * FROM Customers
+WHERE ContactName LIKE '%e';
+3.
+INSERT INTO Customers (CustomerName, ContactName, Adress, City, PostalCode, Country)
+VALUES ('ZasyadkoQA', Zasyadko Dmitrii', 'Leninast.', 'Novosibirsk', '630083', 'Rus');
+
+SELECT * FROM Customers
+WHERE ContactName LIKE 'Z%';
+4.
+UPDATE Customers
+SET ContactName = 'DMITRII VLADIMIROVICH'
+WHERE CustomerID = 93;
+
+SELECT * FROM Customers
+WHERE ContactName LIKE 'DM%'
+5. 
+DELETE FROM Customers 
+WHERE City = 'Nantes';
+
+SELECT * FROM [Customers]
+WHERE City = 'Nantes';
+6.
+SELECT Orders.OrderID, Employees.FirstName	
+FROM Orders
+INNER JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID
+AND FirstName = 'Steven';
