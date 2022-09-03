@@ -1,5 +1,5 @@
 ## Домашка №1:
-### Дедлайн 09.08.22
+
 
 1. Analyses: Статья о реорганизации Почты России после прихода нового CEO https://vc.ru/p/new-russian-post-ceo
 Задание: прочитать, выписать и проанализировать, какие меры по улучшению качества были предприняты 
@@ -21,6 +21,6 @@ https://testengineer.ru/chto-takoe-test-plan-i-kak-ego-napisat/
 4. Just do it: 
 Unix command-line basics:
 https://ru.hexlet.io/courses/cli-basics
-Прислать скриншот с результатом
+
 
 **Оценка = 10p.**
