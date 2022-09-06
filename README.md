@@ -18,9 +18,4 @@ https://testengineer.ru/chto-takoe-test-plan-i-kak-ego-napisat/
  
 **Оценка = 10p.**
 
-4. Just do it: 
-Unix command-line basics:
-https://ru.hexlet.io/courses/cli-basics
 
-
-**Оценка = 10p.**
