@@ -1,0 +1,56 @@
+
+#/!bin/bash
+// Коди предлагает создать пять опций
+options=(
+	'1'
+	"2"
+	'3'
+	'4'
+	'5'
+)
+echo 'Please choose an option'
+
+//Показывает какую опцию мы выбрали
+
+select input in "${options[@]}"; do
+	case "$input" in
+//Опция 0 команда показывает все файлы и папки в директории, где запущена командная строка
+		"${options[0]}")
+			ls
+			;;
+//Опция 1 показывает текущую дату и время
+		"${options[1]}")
+			date $'+Time: %T\nDate: %D'
+			;;
+//Опция 2 показывает, что read -p спрашивает какой файл нужно проверить.
+-d проверяет директория ли это
+-f проверяет файл ли это
+Если ни то, ни другое условие не выполняется, то программа пишет, что формат в текущем месте не существует
+
+		"${options[2]}")
+			read -p 'What file do you wish to check? ' finput
+			if [[ -d $finput ]]; then
+				format='%s is a directory.\n'
+			elif [[ -f $finput ]]; then
+				format='%s is a file.\n'
+			else
+				format='%s does not exist.\n'
+			fi
+			printf "$format" "$finput"
+			;;
+//Опция 3 просит выбрать файл, который можно скопировать
+		"${options[3]}")
+			read -p 'Please enter filename: ' binput
+			cp "$binput"{,.bak}
+			;;
+//4 Опция останавливает систему и выдает сообщение "Не валидная опция"
+		"${options[4]}")
+			break
+			;;
+		*)
+			echo 'Not a valid option.'
+			;;
+	esac
+done
+test_bash.sh
+test_bash.sh. На экране.
